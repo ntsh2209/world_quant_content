@@ -1,0 +1,144 @@
+https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/download/
+This is a quant developer/strat role focused on derivatives pricing and risk management in their Synthetic Products Group. Here's your comprehensive prep plan:
+
+1. Core Mathematical Foundations
+Stochastic Calculus & Probability
+Brownian Motion: properties, quadratic variation, martingale properties
+Itô's Lemma: derivation and applications to option pricing
+Stochastic Differential Equations (SDEs): geometric Brownian motion for stock prices
+Martingales & Risk-neutral pricing: fundamental theorems of asset pricing
+Girsanov Theorem: change of measure (for quanto products, FX hedging)
+Resources:
+Shreve's Stochastic Calculus for Finance II (Chapters 1-5)
+Hull's Options, Futures, and Other Derivatives (Chapters 13-15, 26)
+
+2. Derivatives Pricing Models
+Equity Derivatives (Critical)
+Black-Scholes Model: assumptions, derivation, Greeks
+Equity Swaps: pricing total return swaps, dividend treatment, funding spreads
+Variance Swaps: volatility products, convexity adjustments
+Exotic Options: barriers, digitals, autocallables
+Local Volatility Models: Dupire's formula, calibration to market skew
+Stochastic Volatility: Heston model basics
+Futures & Forwards
+Cost of carry model: contango vs backwardation
+Dividend adjustments for equity futures
+Rolling strategies and basis risk
+Resources:
+Hull (Chapters 7-10, 16-18, 27)
+Wilmott on Quantitative Finance (Vol 2: Exotic Options)
+Papers: Read about equity swap mechanics (ISDA documentation overview)
+
+3. Risk Management
+Greeks & Hedging
+Delta hedging: dynamic replication, P&L explain
+Gamma risk: managing convexity, gamma scalping
+Vega hedging: volatility surface risk
+Cross-gamma (FX/Equity): quanto products
+One Delta products: likely refers to delta-one (futures, swaps, forwards)
+Backtesting
+VaR models: historical, parametric, Monte Carlo
+P&L attribution: decomposing trading desk P&L
+Hedging effectiveness: analyzing slippage, transaction costs
+Stress testing: scenario analysis for tail risk
+Resources:
+Hull (Chapter 23: Credit Risk, Chapter 24: Credit Derivatives)
+Jorion's Value at Risk (for risk metrics)
+
+4. Programming & Implementation
+Algorithms You Should Know
+Monte Carlo simulation: pricing path-dependent options, variance reduction techniques
+Finite Difference Methods: PDE solvers for American options
+Calibration algorithms: least squares, Levenberg-Marquardt
+Numerical integration: for Greeks approximation
+Data Structures & Optimization
+Efficient portfolio representations (hash maps for positions)
+Time series analysis for backtesting
+Linear algebra libraries (Eigen, NumPy) for covariance calculations
+Practice:
+Implement Black-Scholes pricer with Greeks in Python/C++
+Build a simple Monte Carlo engine for Asian options
+Code delta hedging simulation with transaction costs
+
+5. Market Mechanics & Trading
+Key Concepts
+Bid-ask spreads: market making, inventory risk
+Funding costs: OIS discounting, CSA agreements
+Dividend risk: discrete vs continuous dividends
+Corporate actions: handling splits, special dividends
+Collateral management: initial margin, variation margin
+FX Risk (mentioned in JD)
+Quanto adjustments: pricing equity derivatives in foreign currency
+Correlation risk: FX-equity correlation in cross-currency products
+FX forwards & swaps: pricing and hedging
+Resources:
+Read recent Goldman Sachs equity derivatives research (if publicly available)
+Investopedia for market conventions
+ISDA master agreements overview
+
+6. Technical Topics Specific to GS SPG
+Synthetic Products Group Context
+Total Return Swaps (TRS): used for synthetic exposure
+Contract for Difference (CFD): similar to equity swaps
+Prime brokerage: financing trades, margin lending
+Regulatory capital: Basel III requirements for derivatives
+Automation & Scaling
+Risk limit systems: real-time monitoring
+Automated hedging: rule-based vs ML-based
+Position reconciliation: dealing with breaks
+
+7. Interview Question Types
+Brain Teasers & Probability
+Classic probability puzzles (coin flips, card games)
+Expected value calculations
+Bayesian reasoning
+Derivatives Questions
+"Derive the Black-Scholes PDE"
+"How would you hedge a variance swap?"
+"Explain gamma P&L in simple terms"
+"How do dividends affect option prices?"
+Coding Challenges
+Implement option pricer from scratch
+Optimize a slow Monte Carlo simulation
+Design a system to track real-time risk metrics
+Behavioral & Situational
+"Tell me about a time you debugged a complex quantitative model"
+"How do you balance speed vs accuracy in production systems?"
+"Describe your process for learning a new financial product"
+
+8. Recommended Study Plan (1-2 Weeks)
+Week 1: Foundations
+Days 1-2: Stochastic calculus review (Brownian motion, Itô's Lemma)
+Days 3-4: Black-Scholes derivation, Greeks, equity swaps
+Days 5-6: Monte Carlo methods, coding practice
+Day 7: Risk management concepts (VaR, backtesting)
+Week 2: Advanced & Practice
+Days 8-9: Local vol, stochastic vol (Heston basics)
+Days 10-11: FX risk, quanto products
+Days 12-13: Mock interviews, coding challenges
+Day 14: Review common pitfalls, behavioral prep
+
+9. Key Resources Summary
+Books
+Hull - Options, Futures, and Other Derivatives (bible for derivatives)
+Shreve - Stochastic Calculus for Finance II (rigorous math)
+Joshi - Quant Job Interview Questions and Answers (practical prep)
+Wilmott - For exotic options and numerical methods
+Online
+QuantStart (quantstart.com): coding tutorials
+Quantlib documentation: industry-standard pricing library
+arXiv.org: recent papers on equity derivatives
+SSRN: Goldman Sachs research papers
+Practice Platforms
+LeetCode (medium/hard): data structures & algorithms
+HackerRank: interview prep
+Green Book (Heard on the Street): finance interview questions
+
+10. Day-Before Checklist
+[ ] Can you derive Black-Scholes from first principles?
+[ ] Can you explain delta hedging with a P&L example?
+[ ] Do you understand equity swap mechanics (funding, dividends)?
+[ ] Can you code a Monte Carlo pricer in 30 minutes?
+[ ] Do you know the difference between local vol and stochastic vol?
+[ ] Can you explain how FX risk affects equity derivatives?
+[ ] Have you prepared 3 questions to ask about SPG's business?
