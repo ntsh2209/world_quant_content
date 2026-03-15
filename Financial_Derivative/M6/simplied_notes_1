@@ -60,5 +60,11 @@ If you were to code this, your logic would follow these steps:
 1. **Define the Model:** Choose your $S_0, K, T, r,$ and $\sigma$.
 2. **Verify Completeness:** Ensure you have enough assets to cover the randomness.
 3. **Calculate the Price:** Use the expectation of the payoff (integral) or the Black-Scholes PDE.
+
+It seems we need more sophisticated models that can capture the volatility smile:
+→ SDEs for price paths that recognize time-varying volatility
+Which kind of models?
+I Local volatility models (volatility depends on strike)
+I Stochastic volatility models (e.g., Heston Model)
 4. **Calculate the Hedge (Delta):** Derive the price formula with respect to $S$.
 5. **Rebalance:** In a simulation, you would "rebalance" your portfolio by checking the Delta at every time step and adjusting your stock/bond mix to match it.
