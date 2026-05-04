@@ -1,0 +1,127 @@
+Question 1: In the Lewis (2001) formula, what role does the characteristic function phi(u) play?
+Options:
+- It defines the option maturity
+- It encodes the distribution of the underlying asset process
+- It calculates the risk-free rate
+- It determines the strike price
+Analysis: Characteristic functions are the Fourier transform of the probability density. Thus, it encodes the distribution.
+
+Question 2: Why is model calibration important in derivative pricing?
+Options:
+- It predicts future stock prices
+- It determines the strike price of options
+- It calculates historical volatility
+- It finds parameter values that make model prices match current market prices
+Analysis: Calibration is the process of finding parameters such that model prices match market prices.
+
+Question 3: If you needed to create a new option pricing method using Fourier transforms, what would be the essential requirement?
+Options:
+- Historical price data only
+- A closed-form Black-Scholes solution
+- The exact probability density function
+- Knowledge of the characteristic function of the underlying process
+Analysis: Fourier methods rely on the characteristic function.
+
+Question 4: What is the practical implication of Parseval's relation in Fourier-based option pricing?
+Options:
+- It determines the option's strike price
+- It eliminates numerical errors
+- It converts American options to European
+- It allows computation of integrals in either time or frequency domain
+Analysis: Parseval's relation relates the integral of the product of two functions to the integral of the product of their Fourier transforms.
+
+Question 5: What mathematical theorem do we employ in analytically solving the CF integral for Black-Scholes?
+Options:
+- Cauchy's integral theorem
+- Central limit theorem
+- Mean value theorem
+- Bayes' theorem
+Analysis: The Lewis paper mentions residue calculus and moving contours, which is based on Cauchy's integral theorem.
+
+Question 6: In the expression phi_X(u) = integral e^{iux} f(x) dx, what does f(x) represent?
+Options:
+- The cumulative distribution function
+- The characteristic function of X
+- The probability density function of X
+- The moment generating function
+Analysis: f(x) is the PDF.
+
+Question 7: How does the characteristic function help when working with sums of independent random variables?
+Options:
+- The CF of the sum is the product of individual CFs
+- The CF converts sums to single variables
+- The CF of the sum is the sum of individual CFs
+- The CF eliminates the need to consider independence
+Analysis: Basic property of CFs.
+
+Question 8: What is the main computational benefit of having a closed-form characteristic function?
+Options:
+- It removes model risk
+- It guarantees exact option prices
+- It eliminates all numerical methods
+- It enables fast numerical integration for option pricing
+Analysis: Having a closed-form CF allows for efficient numerical integration (like FFT).
+
+Question 9: In the FFT implementation, what does the parameter N typically represent?
+Options:
+- The strike price
+- The number of simulations
+- The number of time steps
+- The number of grid points for discretization
+Analysis: N is the number of points in the FFT grid.
+
+Question 10: If N = 4096 and the factor g = 1, how many grid points are used in the FFT?
+Options:
+- 1024
+- 8192
+- 2048
+- 4096
+Analysis: N is the number of points. If g=1, N=4096.
+
+Question 11: What is the main benefit of FFT when pricing options across many strikes?
+Options:
+- FFT computes prices for all strikes in a single computation
+- FFT handles American features better
+- FFT eliminates all numerical errors
+- FFT is more accurate than other methods
+Analysis: FFT's main advantage is computing a vector of prices for different strikes simultaneously.
+
+Question 12: Why does FFT pricing work well for Black-Scholes even though we have a closed-form solution?
+Options:
+- FFT is always preferable to closed-form
+- It validates the FFT method and serves as a benchmark
+- FFT handles dividends better
+- The closed-form is less accurate
+Analysis: It's used as a benchmark to verify the numerical method.
+
+Question 13: For high volatility sigma = 0.5 with S0 = 100, K = 100, r = 0.05, T = 1, what is the call option price under Lewis (2001) method?
+Options:
+- 21.79
+- 18.25
+- 25.6
+- 15.9
+Analysis: Need to calculate using BS formula (since Lewis should match BS).
+
+Question 14: For a short-term call option with S0 = 100, K = 100, r = 0.05, sigma = 0.3, T = 0.25, what is the option price under Lewis (2001) method?
+Options:
+- 4.85
+- 6.58
+- 8.42
+- 3.25
+Analysis: Need to calculate.
+
+Question 15: When comparing Lewis to Carr-Madan FFT, which is generally preferred?
+Options:
+- They cannot be compared
+- Carr-Madan is always superior
+- Lewis is often preferred despite similar computational times
+- Lewis only works for European options
+Analysis: The supplemental material (page 49) says "Lewis is usually the preferred method".
+
+Question 16: What is the impact of the .real operation in BS_integral?
+Options:
+- It converts to risk-neutral probability
+- It extracts the real part of the complex number result
+- It ensures the stock price is positive
+- It calculates the present value
+Analysis: .real in Python/Numpy extracts the real part.
